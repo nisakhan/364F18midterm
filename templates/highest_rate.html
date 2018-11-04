@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Highest Rating: </h1>
+</div>
+The movie with the highest rating (in this database) is:
+<br>
+{% for tw in alistofstuff %}
+    <strong>{{tw[0]}}%</strong> for <strong>{{tw[1]}}</strong> posted by {{tw[2]}}.
+{% endfor %}
+<br>
+{% if not movietitle %}
+    There are no saved ratings to show.
+{% endif %}
+
+
+{% endblock %}

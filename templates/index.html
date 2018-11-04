@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="page-header">
+    <h1>{% if num_movies %}{{ num_movies }}{% else %}0{% endif %} movies saved. </h1>
+</div>
+<div>
+<form method="POST">
+	{{ form.hidden_tag() }}
+	{{ form.text.label }} {{ form.text() }}
+	{{ form.rating.label }} {{ form.rating() }}
+    {{ form.display_name.label }} {{ form.display_name() }}
+	{{ form.submit() }}
+</form>
+</div>
+
+<p>Enter a movie you watched recently, your rating of that movie (no percent sign and must be
+between 0-100), and a funky display name (must be longer than 2 words. Have fun with it!). It will be added to a database of movies that
+you and friends love! In the movies page, you will get to see what others rated it on The Movie Database and compare the scores!
+It's a handy notepad of your favorite pieces of work and what you think about them! </p>
+<p>You <b>CAN</b> save the same movie twice-- but it has to have either a different rating or user!</p>
+<p><strong><u>CHECK YOUR SPELLING</u></strong>
+
+<div>
+{% for message in get_flashed_messages() %}
+    <strong>{{ message }}</strong>
+{% endfor %}
+</div>
+
+{% endblock %}

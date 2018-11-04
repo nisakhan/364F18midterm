@@ -1,0 +1,14 @@
+{% block content %}
+
+This is the base template of an application for movie ratings.
+
+{% endblock %}
+
+<p>------------</p>
+<h3>Navigation</h3>
+<ul>
+    <li><a href="{{ url_for('index')}}">Go to input form.</a></li>
+    <li><a href="{{ url_for('see_all_movies')}}">See all movies you listed so far, their ratings, and the RT rating.</a></li>
+    <li><a href="{{ url_for('see_all_users')}}">See all display names who are contributing to the list.</a></li>
+    <li><a href="{{ url_for('highest_rate')}}">See which movie in this database has the highest rating! (Highest locally.)</a></li>
+</ul>

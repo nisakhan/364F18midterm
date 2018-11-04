@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-header">
+    <h1>All movies: </h1>
+</div>
+<ul>
+{% for tw in all_movies %}
+    <li><u><strong>{{ tw[0] }}</strong></u><br><i>posted by</i> <strong>{{ tw[1] }}</strong></li>
+    {{tw[2]}} is the rating you gave this movie. Good take <strong>{{ tw[1] }}</strong>!<br>
+    {{tw[3]}} is The Movie Database voter rating.<br><br>
+{% endfor %}
+</ul>
+
+{% if not all_movies %}
+    There are no saved movies to show.
+{% endif %}
+
+
+<div>
+{% for message in get_flashed_messages() %}
+    <strong>*** {{ message }} ***</strong>
+{% endfor %}
+</div>
+
+{% endblock %}
