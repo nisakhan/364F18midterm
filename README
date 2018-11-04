@@ -1,0 +1,14 @@
+
+Enter a movie you watched recently, your rating of that movie (no percent sign and must be between 0-100), and a funky display name (must be longer than 2 words. Have fun with it!). It will be added to a database of movies that you and friends love! In the movies page, you will get to see what others rated it on The Movie Database API and compare the scores!
+
+It's a handy notepad of your favorite pieces of work and what you think about them!
+
+You CAN save the same movie twice-- but it has to have either a different rating or user!
+
+CHECK YOUR SPELLING
+
+ROUTES:
+http://localhost:5000/ -> index.html
+http://localhost:5000/all_movies -> all_movies.html
+http://localhost:5000/all_users -> all_users.html
+http://localhost:5000/highest_rate -> highest_rate/html
